@@ -4,7 +4,7 @@
 float min(float arr[], int size) 
 {
   float min_value = arr[0];
-  for (int i = 1; i < size; i++) 
+  for (int i = 0; i < size; i++) 
   {
     if (arr[i] < min_value) 
     {
@@ -17,7 +17,7 @@ float min(float arr[], int size)
 float max(float arr[], int size) 
 {
   float max_value = arr[0];
-  for (int i = 1; i < size; i++) 
+  for (int i = 0; i < size; i++) 
   {
     if (arr[i] > max_value) 
     {
@@ -55,12 +55,12 @@ int main()
 
   for (int i = 0; i < SIZE; i++) 
   {
-    printf("Messwert %d: %.2f\n", i + 1, messwerte1[i]);
+    messwerte1[i] += 2.7;
   }
 
   for (int i = 0; i < SIZE; i++) 
   {
-    messwerte1[i] += 2.7;
+    printf("Messwert %d: %.2f\n", i + 1, messwerte1[i]);
   }
 
   for (int i = 0; i < SIZE; i++) 
