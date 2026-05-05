@@ -8,17 +8,23 @@ int main()
     printf("Sieb des Eratosthenes\n");
     printf("---------------------\n\n");
 
-    int arr[201], n = 0;
+    const int max_limit = 200;
+    int arr[max_limit + 1], n = 0;
 
-    for (int i = 1; i <= 200; i++) {    // Array Initialisierung
+    for (int i = 1; i <= max_limit; i++)    // Array Initialisierung
+    {    
         arr[i] = i;
     }
 
-    for (int i = 2; i <= 200; i++) {    // Sieb von Eratosthenes
-        if (arr[i] != 0) {
-            for (int j = i * i; j <= 200; j += i) {
+    for (int i = 2; i <= max_limit; i++)    // Sieb von Eratosthenes
+    {    
+        if (arr[i] != 0) 
+        {
+            for (int j = 2 * i; j <= max_limit; j += i)
+            {
                 arr[j] = 0;
             }
+
             printf("%d ", arr[i]);
             n++;
         }
