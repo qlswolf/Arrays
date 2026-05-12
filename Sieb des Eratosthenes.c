@@ -9,7 +9,7 @@ int main()
     printf("---------------------\n\n");
 
     const int max_limit = 200;
-    int arr[max_limit + 1], n = 0;
+    int arr[max_limit], n = 0;
 
     for (int i = 1; i <= max_limit; i++)    // Array Initialisierung
     {    
