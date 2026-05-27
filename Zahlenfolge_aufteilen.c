@@ -5,14 +5,16 @@
 int main() {
     srand(time(NULL));
 
-    int arr[20], evenarr[20], oddarr[20];
+    const int SIZE = 20;
+    int arr[SIZE], evenarr[SIZE], oddarr[SIZE];
     int even_count = 0, odd_count = 0;
+    int n = sizeof(arr) / sizeof(arr[0]);
 
-    for (int i = 0; i < 20; i++) {
-        arr[i] = rand() % 100 + 1; // Zufällige Zahlen zwischen 1 und 100
+    for (int i = 0; i < SIZE; i++) {
+        arr[i] = rand() % 100 + 1;
     }
 
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < SIZE; i++) {
         if (arr[i] % 2 == 0) {
             evenarr[even_count] = arr[i];
             even_count++;
@@ -22,7 +24,7 @@ int main() {
         }
     }
 
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < SIZE; i++) {
         printf("%d ", arr[i]);
     }
     printf("\n");
