@@ -11,9 +11,9 @@ int main()
     const int max_limit = 200;
     int arr[max_limit], n = 0;
 
-    for (int i = 1; i <= max_limit; i++)    // Array Initialisierung
+    for (int i = 0; i < max_limit; i++)    // Array Initialisierung
     {    
-        arr[i] = i;
+        arr[i] = i + 1;
     }
 
     for (int i = 2; i <= max_limit; i++)    // Sieb von Eratosthenes
