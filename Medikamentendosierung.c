@@ -5,12 +5,11 @@
 
 int main() {
     srand(time(NULL));
-    int random = rand() % (150 - 20 + 1) + 20;
 
     int medidos[MAX_VALUE], max = medidos[0], sum = 0;
 
     for (int i = 0; i < MAX_VALUE; i++) {
-        medidos[i] = random;
+        medidos[i] = rand() % (150 - 20 + 1) + 20;
         if (medidos[i] > max) {
             max = medidos[i];
         }
